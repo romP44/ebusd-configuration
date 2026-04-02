@@ -1,0 +1,21 @@
+# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
+#,VMS00,VMS20 S,0020071488 243,,,,,,,,,,
+*r,,,,,,"B509","0D",,,,,,
+*w,,,,,,"B509","0E",,,,,,
+*wi,#install,,,,,"B509","0E",,,,,,
+# ##### general #####,,,,,,,,,,,,,
+r1,,TCollector,TCollector,,,,"0500",,,tempsensor,,,
+r1,,TBottom,TBottom,,,,"0700",,,tempsensor,,,
+r1,,TTank,TTank,,,,"A100",,,tempsensor,,,
+#r1,,SolPumpRelay,Relais Solarpumpe,,,,"0F00",,,onoff,,,Solar pump relay: 0: OFF; 1: ON
+r1,,SolPumpPower,SolarPumpPower,,,,"1000",,,UCH,,%,Performance of solar pump: (7 - 100 %)
+r1,,CurrentFlow,CurrentFlow,,,,"3100",,,UCH,,ml / min,Flow thru buffer circuit if loading the storage
+r1,,YieldCurrentDay,SolarYieldCurrentDay,,,,"6B00",,,energy,,,Accumulated solar gain from 00:00 to 24:00 if time is set
+r3,,YieldLastDay,SolarYieldLastDay,,,,"6C00",,,energy,,,
+r3,,YieldCurrentMonth,SolarYieldCurrentMonth,,,,"6D00",,,energy,,,
+r3,,YieldCurrentYear,SolarYieldCurrentYear,,,,"6E00",,,energy,,,
+r1,,YieldTotal,SolarYieldTotal,,,,"5600",,,energy4,,,Accumulated solar gain since installation
+r1,,YieldCurrent,SolarYieldCurrent,,,,"B100",,,ULG,1000,kW,
+#r1,,SolarPerf,SolarPerf,,,,"B000",,,UCH,,%,
+r4,,ControlPropFactor,ControlPropFactor,,,,"A300",,,EXP,,,
+r4,,ControlIntegralFactor,ControlIntegralFactor,,,,"A400",,,EXP,,,
